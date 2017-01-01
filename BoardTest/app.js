@@ -6,7 +6,7 @@ var http = require('http');
 var server = http.createServer(app);
 var index = require('./routes/index');
 var users = require('./routes/users');
-var port = process.env.PORT || 3000;
+var port = 3033;
 var app = express();
 
 // view engine setup
