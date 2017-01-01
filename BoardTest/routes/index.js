@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
 	console.log("index.page 호출");
 	console.log(__dirname);
 	console.log(path);
-	res.render("index.html")
+	res.render("index")
 });
 
 console.log("call");
