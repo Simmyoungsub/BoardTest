@@ -5,4 +5,4 @@ var boardSchema = new Schema({
 	"username" : String
 });
 
-module.exports = mongoose.model('boardSchema', boardSchema);
+module.exports = mongoose.model('user', boardSchema);

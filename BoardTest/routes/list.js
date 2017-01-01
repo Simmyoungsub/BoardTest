@@ -8,12 +8,12 @@ var row = new board({
 	name : "content1"
 });
 
-row.save(function(err,res){
+/*row.save(function(err,res){
 	if(err){
 		console.log(err);
 	}
 });
-
+*/
 router.get('/', function(req, res) {
 	board.find({},function(err,rows){
 		console.log(rows);
