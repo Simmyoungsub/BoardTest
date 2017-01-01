@@ -5,6 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res) {
 	console.log("index.page 호출");
 	console.log(__dirname);
+	console.log(path);
 	res.sendFile(path.join(__dirname+'/index.html'));
 });
 
