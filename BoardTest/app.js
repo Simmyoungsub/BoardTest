@@ -1,10 +1,12 @@
 var express = require('express');
+var app = express(); 
 var path = require('path');
 var bodyParser = require('body-parser');
-
+var http = require('http');
+var server = http.createServer(app);
 var index = require('./routes/index');
 var users = require('./routes/users');
-
+var port = process.env.PORT || 3000;
 var app = express();
 
 // view engine setup
@@ -15,11 +17,16 @@ app.set('view engine', 'jade');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 //app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+
+server.listen(port, function () {     
+	console.log("Server listening on port %d", port); 
+	
+});
 
 // catch 404 and forward to error handler
 /*app.use(function(req, res, next) {
