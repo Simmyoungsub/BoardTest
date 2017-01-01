@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var http = require('http');
 var server = http.createServer(app);
 var index = require('./routes/index');
+var mongoose = require('./routes/mongodb.js')
 var port = 3033;
 
 // view engine setup
