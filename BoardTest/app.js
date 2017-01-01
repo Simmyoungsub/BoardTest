@@ -5,7 +5,8 @@ var bodyParser = require('body-parser');
 var http = require('http');
 var server = http.createServer(app);
 var index = require('./routes/index');
-var mongoose = require('./routes/mongodb.js')
+var list = require('./routes/list');
+var mongoose = require('./routes/mongodb')
 var port = 3033;
 
 // view engine setup
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
+app.use('/list',list);
 
 server.listen(port, function () {     
 	console.log("Server listening on port %d", port); 
