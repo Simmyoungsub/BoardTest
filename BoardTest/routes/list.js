@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var board = require('./boardSchema');
+var boardSchema = require('./boardSchema');
 
 router.get('/', function(req, res) {
-	board.find({}).exec(function(err,rows){
+	boardSchema.find({}).exec(function(err,rows){
 		console.log(rows); 
 	 });
 });
