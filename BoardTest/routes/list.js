@@ -4,9 +4,9 @@ var mongoose = require('mongoose');
 var board = require('./boardSchema');
 
 router.get('/', function(req, res) {
-	board.find({}).exec(function(err,rows){
-		console.log(rows); 
-	 });
+	board.find({},function(err,rows){
+		console.log(rows);
+	});
 });
 
 module.exports = router;
