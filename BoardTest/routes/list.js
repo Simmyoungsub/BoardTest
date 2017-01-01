@@ -15,7 +15,7 @@ row.save(function(err,res){
 });
 
 router.get('/', function(req, res) {
-	board.find({},function(err,rows){
+	row.find({},function(err,rows){
 		console.log(rows);
 	});
 });
