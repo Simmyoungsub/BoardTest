@@ -6,7 +6,7 @@ var http = require('http');
 var server = http.createServer(app);
 var index = require('./routes/index');
 var list = require('./routes/list');
-var mongoose = require('./routes/mongodb')
+var mongoose = require('./routes/mongodb.js')
 var port = 3033;
 
 // view engine setup
